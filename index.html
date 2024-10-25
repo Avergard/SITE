@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Styled Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/minty/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">MyCarShop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#cars">Cars</a></li>
+        <li class="nav-item"><a class="nav-link" href="sellers.html">Sellers</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost:8080/info">Site Info</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Welcome to MyCarShop</h1>
+  <section id="addCar">
+    <h2>Add a New Car</h2>
+    <form id="addCarForm">
+      <div class="mb-3">
+        <label for="mark" class="form-label">Mark</label>
+        <input type="text" class="form-control" id="mark" required>
+      </div>
+      <div class="mb-3">
+        <label for="technical_condition" class="form-label">Technical Condition</label>
+        <input type="text" class="form-control" id="technical_condition" required>
+      </div>
+      <div class="mb-3">
+        <label for="kilometerage" class="form-label">Kilometerage</label>
+        <input type="number" class="form-control" id="kilometerage" required>
+      </div>
+      <div class="mb-3">
+        <label for="number_of_owners" class="form-label">Number of Owners</label>
+        <input type="number" class="form-control" id="number_of_owners" required>
+      </div>
+      <div class="mb-3">
+        <label for="traffic_accidents" class="form-label">Traffic Accidents</label>
+        <select class="form-select" id="traffic_accidents" required>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Car</button>
+    </form>
+  </section>
+
+  <hr class="my-5">
+
+  <section id="cars">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Cars</h2>
+      <button id="loadCars" class="btn btn-primary">Load Cars</button>
+    </div>
+    <div class="row" id="carsList"></div>
+  </section>
+
+  <hr class="my-5">
+
+</div>
+
+<footer class="bg-light text-center py-3 mt-5">
+  <p>&copy; 2024 MyCarShop. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
